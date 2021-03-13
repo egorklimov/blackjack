@@ -47,7 +47,8 @@ def cli():
     for player in players:
         result = "lost to the dealer"
         if leaderboard[dealer] < leaderboard[player] <= Game.BLACKJACK \
-                and leaderboard[dealer] != Game.BLACKJACK:
+                and leaderboard[dealer] != Game.BLACKJACK \
+                or leaderboard[dealer] > Game.BLACKJACK:
             result = "defeated dealer"
         print(f"\tPlayer {player.name} {result}")
 

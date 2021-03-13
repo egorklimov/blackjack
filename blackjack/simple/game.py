@@ -40,6 +40,7 @@ class SimpleGame(Game):
         for player in self._players:
             if self.__get_player_score(self._dealer) < Game.BLACKJACK:
                 self.__handle(player)
+        self.__handle(self._dealer)
         return self._scoreboard
 
     def __handle(self, player: Player) -> None:

@@ -7,7 +7,7 @@ setup(
     description='My first Python library',
     author='Me',
     license='MIT',
-    entry_points = {
+    entry_points={
         'console_scripts': ['blackjack-cli=blackjack.blackjack_cli:main'],
     },
     install_requires=[],

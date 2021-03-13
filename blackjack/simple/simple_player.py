@@ -1,10 +1,10 @@
 from typing import List
 
-from ..api.card import Card
-from ..api.event.after_turn_event import AfterTurnEvent
-from ..api.event.before_turn_event import BeforeTurnEvent
-from ..api.event.on_turn_event import OnTurnEvent
-from ..api.player import Player
+from blackjack.api.card import Card
+from blackjack.api.event.after_turn_event import AfterTurnEvent
+from blackjack.api.event.before_turn_event import BeforeTurnEvent
+from blackjack.api.event.on_turn_event import OnTurnEvent
+from blackjack.api.player import Player
 
 
 class SimplePlayer(Player):
@@ -17,6 +17,8 @@ class SimplePlayer(Player):
         return self._name
 
     def add_card(self, card: Card) -> None:
+        if card is None:
+            raise ValueError("Card must be not None")
         print(f"Player[id={self._name}]: take card {card.name}")
         self.hand.append(card)
 

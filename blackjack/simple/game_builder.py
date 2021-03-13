@@ -19,7 +19,7 @@ class SimpleGameBuilder(GameBuilder):
         if players is None:
             players = set()
         if deck is None:
-            deck = set()
+            deck = Card.create_default_mutable_deck()
 
         self.deck = deck
         self.dealer = dealer
@@ -29,10 +29,16 @@ class SimpleGameBuilder(GameBuilder):
         return SimpleGame(self.deck, self.dealer, self.players)
 
     def with_dealer(self, dealer: Dealer) -> GameBuilder:
+        if dealer is None:
+            raise ValueError("Dealer must be not None")
         return SimpleGameBuilder(dealer, self.deck, self.players)
 
     def with_players(self, players: MutableSet[Player]) -> GameBuilder:
+        if players is None:
+            raise ValueError("Players must be not None")
         return SimpleGameBuilder(self.dealer, self.deck, players)
 
     def with_deck(self, deck: MutableSet[Card]) -> GameBuilder:
+        if deck is None:
+            raise ValueError("Deck must be not None")
         return SimpleGameBuilder(self.dealer, deck, self.players)

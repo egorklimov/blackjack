@@ -21,6 +21,8 @@ class SimpleDealer(dealer.Dealer):
         return self.proxy_player.name
 
     def send_card(self, player: Player, game: Game) -> None:
+        if len(game.deck) == 0:
+            raise ValueError("The deck is over")
         card: Card = random.choice(list(game.deck))
         player.add_card(card)
         game.deck.remove(card)

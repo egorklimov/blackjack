@@ -27,11 +27,11 @@ class SimpleGame(Game):
 
     @property
     def dealer(self) -> Dealer:
-        return self.dealer
+        return self._dealer
 
     @property
     def players(self) -> MutableSet[Player]:
-        return self.players
+        return self._players
 
     def complete(self) -> Dict[Player, int]:
         self.__start()

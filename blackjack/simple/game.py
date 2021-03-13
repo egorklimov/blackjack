@@ -1,4 +1,3 @@
-import random
 from typing import MutableSet, Dict
 
 from blackjack.api.card import Card
@@ -19,7 +18,8 @@ class SimpleGame(Game):
         self._dealer = dealer
         self._players = players
         self._turn: [int, Player] = [0, dealer]
-        self._scoreboard: Dict[Player, int] = {p: 0 for p in [dealer, *players]}
+        self._scoreboard: Dict[Player, int] =\
+            {p: 0 for p in [dealer, *players]}
 
     @property
     def deck(self) -> MutableSet[Card]:

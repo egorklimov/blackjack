@@ -1,4 +1,4 @@
-from typing import List, MutableSet
+from typing import MutableSet
 
 from blackjack.api.card import Card
 from blackjack.api.dealer import Dealer
@@ -10,7 +10,10 @@ from blackjack.simple.game import SimpleGame
 
 
 class SimpleGameBuilder(GameBuilder):
-    def __init__(self, dealer: Dealer=None, deck=None, players=None):
+    def __init__(self,
+                 dealer: Dealer = None,
+                 deck: MutableSet[Card] = None,
+                 players: MutableSet[Player] = None):
         if dealer is None:
             dealer = SimpleDealer()
         if players is None:

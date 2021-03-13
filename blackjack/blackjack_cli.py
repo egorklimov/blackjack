@@ -52,9 +52,14 @@ def cli():
         print(f"\tPlayer {player.name} {result}")
 
 
-if __name__ == "__main__":
+def main():
     try:
         print("Welcome to CLI casino!")
         cli()
+        print("Thanks for playing, come again")
     except ApplicationInterruptedException:
         print("Game stopped, bye.")
+
+
+if __name__ == "__main__":
+    main()

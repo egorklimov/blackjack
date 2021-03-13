@@ -17,7 +17,6 @@ class SimpleGame(Game):
         self._deck = deck
         self._dealer = dealer
         self._players = players
-        self._turn: [int, Player] = [0, dealer]
         self._scoreboard: Dict[Player, int] =\
             {p: 0 for p in [dealer, *players]}
 
@@ -39,7 +38,8 @@ class SimpleGame(Game):
             return self._scoreboard
 
         for player in self._players:
-            self.__handle(player)
+            if self.__get_player_score(self._dealer) < Game.BLACKJACK:
+                self.__handle(player)
         return self._scoreboard
 
     def __handle(self, player: Player) -> None:

@@ -11,8 +11,11 @@ phases:
       - python -m pytest -v
   post_build:
     commands:
+      - python setup.py clean
       - echo Build completed on `date`
 artifacts:
   files:
-    - '**/*'
+    - 'blackjack/*'
+    - 'tests/*'
+    - 'setup.py'
   name: blackjack-latest

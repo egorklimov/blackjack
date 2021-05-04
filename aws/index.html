@@ -1,20 +1,16 @@
-# blackjack
-[![CI](https://github.com/egorklimov/blackjack/actions/workflows/package.yml/badge.svg)](https://github.com/egorklimov/blackjack/actions/workflows/package.yml)
+<!DOCTYPE html>
+<html lang="en">
+<body>
 
-This project provides:
- * Flexible blackjack library `blackjack-lib` allowing to create a different blackjack games;
- * CLI tool to play a blackjack `blackjack-cli` locally.
-
-## Install from source
-
-```
-python setup.py pytest && python setup.py install
-blackjack-cli
-```
-
-## CLI Example
-```shell
-$ blackjack-cli
+<h1 id="blackjack">blackjack</h1>
+<p><a href="https://github.com/egorklimov/blackjack/actions/workflows/package.yml"><img src="https://github.com/egorklimov/blackjack/actions/workflows/package.yml/badge.svg" alt="CI" /></a></p>
+<p>This project provides: * Flexible blackjack library <code>blackjack-lib</code> allowing to create a different blackjack games; * CLI tool to play a blackjack <code>blackjack-cli</code> locally.</p>
+<h2 id="install-from-source">Install from source</h2>
+<a href="http://s3-eu-central-1.amazonaws.com/hw11-t2-codedeploybucket-1gngo42eemij8/artifacts.zip">Latest sources</a>
+<pre><code>python setup.py pytest &amp;&amp; python setup.py install
+blackjack-cli</code></pre>
+<h2 id="cli-example">CLI Example</h2>
+<pre class="shell"><code>$ blackjack-cli
 Welcome to CLI casino!
 Please choose bot count: 2
 Please, choose count of users: 1
@@ -35,8 +31,8 @@ Player[id=Hackerman]: before turn
 Player[id=Hackerman]: makes turn, current sum=16
 Hackerman, make your turn: help
 Available commands:
-	more: Take one more card from Dealer.
-	skip: Skip your turn.
+    more: Take one more card from Dealer.
+    skip: Skip your turn.
 Hackerman, make your turn: more
 Player[id=Hackerman]: take card 9_of_Spades
 Player[id=Hackerman]: made a turn
@@ -55,14 +51,16 @@ Player[id=Dealer]: before turn
 Player[id=Dealer]: makes turn, sum=20
 Player[id=Dealer]: made a turn
 Leader Board:
-	Dealer: 20
-	Player_0: 24
-	Hackerman: 25
-	Player_1: 18
+    Dealer: 20
+    Player_0: 24
+    Hackerman: 25
+    Player_1: 18
 Results:
-	Player Player_0 lost to the dealer
-	Player Hackerman lost to the dealer
-	Player Player_1 lost to the dealer
+    Player Player_0 lost to the dealer
+    Player Hackerman lost to the dealer
+    Player Player_1 lost to the dealer
 Thanks for playing, come again
+</code></pre>
 
-```
+</body>
+</html>

@@ -14,10 +14,11 @@ phases:
       - python setup.py clean
       - echo Build completed on `date`
 artifacts:
+  type: S3
   files:
     - 'blackjack/*'
     - 'tests/*'
     - 'conftest.py'
     - 'setup.py'
-  type: S3
   name: blackjack-latest.zip
+  overrideArtifactName: true

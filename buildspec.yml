@@ -20,5 +20,6 @@ artifacts:
     - 'tests/*'
     - 'conftest.py'
     - 'setup.py'
+    - 'README.md'
   name: blackjack-latest.zip
   overrideArtifactName: true

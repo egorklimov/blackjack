@@ -3,6 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
+      - yum -y install openssl-devel
       - wget https://www.python.org/ftp/python/3.8.0/Python-3.8.0.tar.xz
       - tar xJf Python-3.8.0.tar.xz
       - cd Python-3.8.0

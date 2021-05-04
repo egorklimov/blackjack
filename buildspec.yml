@@ -2,12 +2,16 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      python: 3.8
+    commands:
+      - wget https://www.python.org/ftp/python/3.8.0/Python-3.8.0.tar.xz
+      - tar xJf Python-3.8.0.tar.xz
+      - cd Python-3.8.0
+      - ./configure
+      - make
+      - make install
   pre_build:
     commands:
-      - python3 -m pip3 install --upgrade pip3
-      - pip3 install flake8 pytest
+      - pip install flake8 pytest
   build:
     commands:
       - pytest -v

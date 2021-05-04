@@ -17,5 +17,6 @@ artifacts:
   files:
     - 'blackjack/*'
     - 'tests/*'
+    - 'conftest.py'
     - 'setup.py'
-  name: blackjack-latest
+  name: blackjack-latest.zip

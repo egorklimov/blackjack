@@ -6,7 +6,7 @@ phases:
       python: 3.8
   pre_build:
     commands:
-      - python3 -m pip install --upgrade pip
+      - python3 -m pip3 install --upgrade pip3
       - pip3 install flake8 pytest
   build:
     commands:

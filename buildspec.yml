@@ -2,20 +2,13 @@ version: 0.2
 
 phases:
   install:
+    runtime-versions:
+      python: 3.7
     commands:
-      - apt-get -y install openssl-devel
-      - wget https://www.python.org/ftp/python/3.8.0/Python-3.8.0.tar.xz
-      - tar xJf Python-3.8.0.tar.xz
-      - cd Python-3.8.0
-      - ./configure
-      - make
-      - make install
-  pre_build:
-    commands:
-      - pip3 install flake8 pytest
+      - pip3 install pytest
   build:
     commands:
-      - pytest -v
+      - python -m pytest -v
   post_build:
     commands:
       - echo Build completed on `date`

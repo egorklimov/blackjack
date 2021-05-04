@@ -16,8 +16,8 @@ phases:
 artifacts:
   type: S3
   files:
-    - 'blackjack/*'
-    - 'tests/*'
+    - 'blackjack/**/*'
+    - 'tests/**/*'
     - 'conftest.py'
     - 'setup.py'
     - 'README.md'
